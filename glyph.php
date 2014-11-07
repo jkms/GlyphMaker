@@ -1,6 +1,6 @@
 <?php
 
-$string = 'londondrugs';
+$string = "londondrugs";
 $domainstring = str_split($string);
 
 $glyphs['l'] = array("1", "I");
@@ -12,6 +12,8 @@ $glyphs['d'] = array("cl", "cI", "c1");
 $glyphs['g'] = array("q");
 $glyphs['s'] = array("z");
 
+print_r($glyphs);
+/*
 // $j = count($domainstring);
 $j = 1;
 for ($i=0; $i < $j; $i++) {
@@ -23,5 +25,5 @@ for ($i=0; $i < $j; $i++) {
 		echo $returnoutput;
 	}
 }
-
+*/
 ?>
