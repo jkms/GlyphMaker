@@ -13,10 +13,12 @@ $glyphs['g'] = array("q");
 $glyphs['s'] = array("z");
 
 print_r($glyphs);
-/*
+
 // $j = count($domainstring);
 $j = 1;
 for ($i=0; $i < $j; $i++) {
+	echo "hello";
+	/*
 	$l = count($glyphs[$domainstring[$i]]);
 	for ($k=0; $k < $l; $k++) {
 		$output = $domainstring
@@ -24,6 +26,7 @@ for ($i=0; $i < $j; $i++) {
 		$returnoutput = implode($output);
 		echo $returnoutput;
 	}
+	*/
 }
-*/
+
 ?>
