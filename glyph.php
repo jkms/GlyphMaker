@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
 
 $string = "londondrugs";
 $domainstring = str_split($string);
@@ -18,8 +20,10 @@ print_r($glyphs);
 $j = 1;
 for ($i=0; $i < $j; $i++) {
 	echo "hello";
-	/*
+	
 	$l = count($glyphs[$domainstring[$i]]);
+	echo $l;
+	/*
 	for ($k=0; $k < $l; $k++) {
 		$output = $domainstring
 		$output[$i] = $glyphs[$domainstring[$i]];
