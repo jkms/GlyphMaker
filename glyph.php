@@ -20,10 +20,11 @@ Function glyph($input) {
 	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[$i]]);
 		for ($k=0; $k<$l; $k++) {
-			$textarray[$i] = $glyphs[$textarray[$i]][$k];
-			$test = implode('',$textarray);
+			$output=$textarray;
+			$output[$i]=$glyphs[$textarray[$i]][$k];
+			$test = implode('',$output);
 			echo "this is a test: $test<br>\n";
-			$returnoutput[] = implode('',$textarray);
+			$returnoutput[] = implode('',$output);
 		}
 	}
 	return $returnoutput;
