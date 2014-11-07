@@ -9,8 +9,8 @@ $glyphs['l'] = array("1", "I");
 $glyphs['o'] = array("0");
 $glyphs['n'] = array("ri");
 $glyphs['d'] = array("cl", "cI", "c1");
-// $glyphs['r'] = array("");
-// $glyphs['u'] = array("");
+$glyphs['r'] = NULL;
+$glyphs['u'] = NULL;
 $glyphs['g'] = array("q");
 $glyphs['s'] = array("z");
 
