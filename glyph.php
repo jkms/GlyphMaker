@@ -30,6 +30,7 @@ Function glyph($input) {
 }
 
 $textarray = str_split($string);
+print_r($textarray);
 $j = count($textarray);
 for ($i=0; $i<$j; $i++) {
 	$textarray[$i]['glyph']=0;
