@@ -14,16 +14,12 @@ $glyphs['d'] = array("cl", "cI", "c1");
 $glyphs['g'] = array("q");
 $glyphs['s'] = array("z");
 
-// print_r($glyphs);
-
-// $j = count($domainstring);
-$j = 1;
+$j = count($domainstring);
 for ($i=0; $i < $j; $i++) {
 	$l = count($glyphs[$domainstring[$i]]);
 	for ($k=0; $k < $l; $k++) {
 		$output = $domainstring;
 		$output[$i] = $glyphs[$domainstring[$i]][$k];
-		$test = $glyphs[$domainstring[$i]][$k];
 		echo "my test is $test<br>\n";
 		$returnoutput = implode('',$output);
 		echo "$returnoutput<br>\n";
