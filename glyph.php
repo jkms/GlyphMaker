@@ -20,7 +20,6 @@ for ($i=0; $i < $j; $i++) {
 	for ($k=0; $k < $l; $k++) {
 		$output = $domainstring;
 		$output[$i] = $glyphs[$domainstring[$i]][$k];
-		echo "my test is $test<br>\n";
 		$returnoutput = implode('',$output);
 		echo "$returnoutput<br>\n";
 	}
