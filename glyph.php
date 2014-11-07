@@ -24,7 +24,7 @@ for ($i=0; $i < $j; $i++) {
 	$l = count($glyphs[$domainstring[$i]]);
 	echo $l;
 	for ($k=0; $k < $l; $k++) {
-		$output = $domainstring
+		$output = $domainstring;
 		$output[$i] = $glyphs[$domainstring[$k]];
 		$returnoutput = implode('', $output);
 		echo $returnoutput;
