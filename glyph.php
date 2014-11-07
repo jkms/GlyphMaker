@@ -16,15 +16,22 @@ Function glyph($input) {
 	$glyphs['s'] = array("z");
 	
 	$j = count($textarray);
-	for ($i=0; $i < $j; $i++) {
+	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[$i]]);
 		for ($k=0; $k < $l; $k++) {
 			$output = $textarray;
 			$output[$i] = $glyphs[$textarray[$i]][$k];
-			$returnoutput = implode('',$output);
+			$returnoutput[] = implode('',$output);
 			return $returnoutput;
 		}
 	}
 }
-echo glyph($string);
+
+$blahblah = glyph($string);
+
+$j = count($blahblah);
+
+for ($i=0; $i<$j; $i++) {
+	echo $blahblah[$i];
+}
 ?>
