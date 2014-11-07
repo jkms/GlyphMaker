@@ -19,16 +19,12 @@ $glyphs['s'] = array("z");
 // $j = count($domainstring);
 $j = 1;
 for ($i=0; $i < $j; $i++) {
-	echo "hello";
-	
 	$l = count($glyphs[$domainstring[$i]]);
-	echo $l;
 	for ($k=0; $k < $l; $k++) {
 		$output = $domainstring;
 		$output[$i] = $glyphs[$domainstring[$k]];
 		$returnoutput = implode('', $output);
-		echo $returnoutput;
+		echo "$returnoutput<br>\n";
 	}
 }
-
 ?>
