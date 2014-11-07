@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 $string = "londondrugs";
 
-Function Glyph($input) {
+Function glyph($input) {
 	$textarray = str_split($input);
 	$glyphs['l'] = array("1", "I");
 	$glyphs['o'] = array("0");
@@ -22,7 +22,7 @@ Function Glyph($input) {
 			$output = $textarray;
 			$output[$i] = $glyphs[$textarray[$i]][$k];
 			$returnoutput = implode('',$output);
-			return $output;
+			return $returnoutput;
 		}
 	}
 }
