@@ -19,8 +19,10 @@ Function glyph($input) {
 	$j = count($textarray);
 	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[$i]]);
-		for ($k=0; $k < $l; $k++) {
+		for ($k=0; $k<$l; $k++) {
 			$textarray[$i] = $glyphs[$textarray[$i]][$k];
+			$test = implode('',$textarray);
+			echo "this is a test: $test<br>\n";
 			$returnoutput[] = implode('',$textarray);
 		}
 	}
@@ -28,10 +30,13 @@ Function glyph($input) {
 }
 
 $blahblah = glyph($string);
+print_r($blahblah);
 
+/*
 $j = count($blahblah);
 
 for ($i=0; $i<$j; $i++) {
 	echo $blahblah[$i];
 }
+*/
 ?>
