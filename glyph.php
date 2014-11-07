@@ -18,7 +18,7 @@ Function glyph($input) {
 	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[$i]]);
 		for ($k=0; $k<$l; $k++) {
-			if ($textarray[$i]['unglyphed']) {
+			if ($textarray[$i]['unglyphed']==0) {
 				$output=$textarray;
 				$output[$i]=$glyphs[$textarray[$i]][$k];
 				$output[$i]['unglyphed']=0;
@@ -32,8 +32,9 @@ Function glyph($input) {
 $textarray = str_split($string);
 $j = count($textarray);
 for ($i=0; $i<$j; $i++) {
-	$textarray[$i]['unglyphed']=1;
+	$textarray[$i]['glyph']=0;
 }
+
 $blahblah = glyph($textarray);
 print_r($blahblah);
 
