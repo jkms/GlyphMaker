@@ -6,6 +6,7 @@ $string = "londondrugs";
 
 Function glyph($input) {
 	$textarray = str_split($input);
+
 	$glyphs['l'] = array("1", "I");
 	$glyphs['o'] = array("0");
 	$glyphs['n'] = array("ri");
@@ -14,17 +15,16 @@ Function glyph($input) {
 	$glyphs['u'] = NULL;
 	$glyphs['g'] = array("q");
 	$glyphs['s'] = array("z");
-	
+
 	$j = count($textarray);
 	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[$i]]);
 		for ($k=0; $k < $l; $k++) {
-			$output = $textarray;
-			$output[$i] = $glyphs[$textarray[$i]][$k];
-			$returnoutput[] = implode('',$output);
-			return $returnoutput;
+			$textarray[$i] = $glyphs[$textarray[$i]][$k];
+			$returnoutput[] = implode('',$textarray);
 		}
 	}
+	return $returnoutput;
 }
 
 $blahblah = glyph($string);
