@@ -22,7 +22,7 @@ Function glyph($input) {
 				$output=$textarray;
 				$output[$i]=$glyphs[$textarray[$i]][$k];
 				$output[$i]['unglyphed']=0;
-				$returnoutput[] = implode('',$output);
+				$returnoutput[] = $output;
 			}
 		}
 	}
@@ -36,13 +36,9 @@ for ($i=0; $i<$j; $i++) {
 }
 
 $blahblah = glyph($textarray);
-print_r($blahblah);
 
-/*
 $j = count($blahblah);
-
 for ($i=0; $i<$j; $i++) {
-	echo $blahblah[$i];
+	$temp = implode('',$blahblah[$i]);
 }
-*/
 ?>
