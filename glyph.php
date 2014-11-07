@@ -24,7 +24,7 @@ for ($i=0; $i < $j; $i++) {
 		$output = $domainstring;
 		$output[$i] = $glyphs[$domainstring[$k]];
 		$test = $glyphs[$domainstring[$k]];
-		echo "my test is $test<br>\n"
+		echo "my test is $test<br>\n";
 		$returnoutput = implode('',$output);
 		echo "$returnoutput<br>\n";
 	}
