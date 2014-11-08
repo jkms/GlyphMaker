@@ -2,7 +2,7 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-$string = "londondrugs";
+
 
 Function glyph($input) {
 	$glyphs['l'] = array("1", "I");
@@ -14,14 +14,14 @@ Function glyph($input) {
 	$glyphs['g'] = array("q");
 	$glyphs['s'] = array("z");
 
-	$j = count($textarray);
+	$j = count($textarray[0][$array]);
 	for ($i=0; $i<$j; $i++) {
-		$l = count($glyphs[$textarray[$i]]);
+		$l = count($glyphs[$textarray[0][$array][$i]]);
 		for ($k=0; $k<$l; $k++) {
-			if ($textarray[$i]['unglyphed']==0) {
-				$output=$textarray;
-				$output[$i]=$glyphs[$textarray[$i]][$k];
-				$output[$i]['unglyphed']=0;
+			if ($textarray[0][$array][$i]['glyph']==0) {
+				$output=$textarray[0][$array]
+				$output[$i]=$glyphs[$textarray[0][$array][$i]][$k];
+				$output[$i]['glyph']=0;
 				$returnoutput[] = $output;
 			}
 		}
@@ -29,11 +29,16 @@ Function glyph($input) {
 	return $returnoutput;
 }
 
-$textarray = str_split($string);
-print_r($textarray);
-$j = count($textarray);
+
+$string = "londondrugs";
+$temp = str_split($string);
+$j = count($temp);
 for ($i=0; $i<$j; $i++) {
-	$textarray[$i]['glyph']=0;
+	$textarray[$i]['string'] = $string;
+	$textarray[$i]['array'] = array(
+		$i => $temp[$i],
+		'glyph' => 0
+	);
 }
 
 $blahblah = glyph($textarray);
