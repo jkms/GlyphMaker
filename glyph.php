@@ -19,7 +19,7 @@ Function glyph($input) {
 		$l = count($glyphs[$textarray[0][$array][$i]]);
 		for ($k=0; $k<$l; $k++) {
 			if ($textarray[0][$array][$i]['glyph']==0) {
-				$output=$textarray[0][$array]
+				$output=$textarray[0][$array];
 				$output[$i]=$glyphs[$textarray[0][$array][$i]][$k];
 				$output[$i]['glyph']=0;
 				$returnoutput[] = $output;
