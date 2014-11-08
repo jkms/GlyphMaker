@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 
 
-Function glyph($input) {
+Function glyph($textarray) {
 	$glyphs['l'] = array("1", "I");
 	$glyphs['o'] = array("0");
 	$glyphs['n'] = array("ri");
@@ -13,7 +13,6 @@ Function glyph($input) {
 	$glyphs['u'] = NULL;
 	$glyphs['g'] = array("q");
 	$glyphs['s'] = array("z");
-
 	$j = count($textarray[0][$array]);
 	for ($i=0; $i<$j; $i++) {
 		$l = count($glyphs[$textarray[0][$array][$i]]);
